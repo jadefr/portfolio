@@ -4,16 +4,16 @@
     html {
         height: 100%;
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     body {
-        /*background-color: #505050;*/
+        background-color: #505050;
         color: white;
         margin: 0;
         padding: 0;
         text-align: center;
         font-family: "Times New Roman", serif;
-
 
         perspective: 1px;
         transform-style: preserve-3d;
@@ -22,6 +22,8 @@
         overflow-x: hidden;
     }
 
+
+    /* Menu Bar */
     .menu-bar {
         overflow: hidden;
         background: white;
@@ -38,25 +40,34 @@
     }
 
     .menu-bar a:hover {
-        background-color: #ddd;
+        background: #ddd;
         color: black;
     }
 
+    #linkedin-icon {
+        color: #505050;
+    }
+
+    /* Header */
 
     header {
-        /*min-height: 400px;
-        color: #505050;
-        padding: 2%;*/
         background: white;
         color: #505050;
-        box-sizing: border-box;
-        min-height: 100vh;
+        /*min-height: 100vh;*/
+
+        min-height: calc(100vh - 50px - 2em);
+
+        width: 100vw;
         padding: 20vw 0 5vw;
         position: relative;
         transform-style: inherit;
-        width: 100vw;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
 
     }
+
 
     .logo_image {
         height: 3.2rem;
@@ -66,7 +77,7 @@
     .header_logo-box {
         position: absolute;
         top: 0.6rem;
-        left: 0.6rem;
+        left: 1.5rem;
     }
 
     .logo_image:hover {
@@ -75,14 +86,18 @@
 
 
     .header_text-box {
-        margin: 10% 0;
+        /*margin: 10% 0;*/
+
+        margin-top: auto;
+        margin-bottom: auto;
+
     }
 
     .font-first-main {
-        margin-top: -200px;
+        margin-top: -250px;
 
         text-transform: lowercase;
-        line-height: 1.7;
+        /*line-height: 1.7;*/
         display: block;
         font-size: 6.5rem;
         font-weight: 400;
@@ -99,6 +114,7 @@
         letter-spacing: 0.3rem;
         animation: rightIn 0.75s ease-out;
         padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     .btn {
@@ -113,14 +129,16 @@
     }
 
     .btn-header {
-        margin-top: 2em;
+        margin-top: 0.5rem;
     }
 
     .btn:hover {
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
-        background-color: #eeeeee;
+        background: #eeeeee;
     }
 
+
+    /* Sobre Mim */
 
     #sobre-mim {
         padding: 5%;
@@ -215,8 +233,8 @@
     }
 
     #projetos {
-        background-color: white;
-        color:  #505050;
+        background: white;
+        color: #505050;
         /*margin: 10px;
         border-radius: 10px;*/
     }
@@ -253,7 +271,7 @@
 
     /* Dark Bar */
     .dark-bar {
-        background-color: #505050;
+        background: #505050;
         color: white;
         padding: 0.5em;
     }
@@ -262,10 +280,10 @@
     /* Educação */
 
     #educação {
-        background-color: white;
+        background: white;
         color: #505050;
         /*margin: 10px;
-        border-radius: 10px;*/    /* Dark Bar */
+        border-radius: 10px;*/ /* Dark Bar */
 
     }
 
@@ -297,10 +315,12 @@
     }
 
 
-    /* Contato */
+    /* Contato
 
     #contato {
+        background: black;
         display: flex;
+        padding: 4%;
     }
 
     .contato_box {
@@ -311,18 +331,104 @@
 
     .contato_box:first-child {
         background: #0000c1;
-    }
+    }*/
 
 
     /* Footer */
+
     footer {
-        padding: 4%;
-        background: black;
-        color: white;
+        /*background: #26272b;
+        color: #737373;*/
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #074afa;
+    }
+
+    .footer_container-first {
+        color: #adb5bd;
+        font-weight: lighter;
+        background-color: #343a40;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .footer_contact-box {
+        text-align: left;
+        padding-left: 3em;
+    }
+
+    .font-fourth-main {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: bold;
+    }
+
+    .font-fourth-sub {
+        color: #dee2e6;
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    .footer_icon-first {
+        display: inline-block;
+        font-size: 1.1em;
+        padding-right: 1em;
     }
 
     .footer_logo-box {
-        position: center;
+
+    }
+
+    #footer_logo-image {
+        height: 4rem;
+        padding-top: 3em;
+    }
+
+    .footer_quick-links {
+        padding-right: 3.5rem;
+    }
+
+    .footer_quick-links-text {
+        text-align: left;
+        float: right;
+    }
+
+
+    .footer_container-second {
+        display: grid;
+        color: #868e96;
+        background-color: #212529;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #dddddd;
+    }
+
+    footer a:hover {
+        color: #3366cc;
+    }
+
+    #skills:hover,
+    #footer_projetos:hover {
+        color: #3366cc;
+    }
+
+    .footer_icon-box-second {
+        font-size: 1.4rem;
+        margin-top: 0.5em;
+        text-align: right;
+        padding-right: 1em;
+        text-decoration: none;
+    }
+
+    .footer_icon-second {
+        padding-right: 0.5em;
     }
 
     @media (max-width: 1140px) {
@@ -330,10 +436,12 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(3, 1fr);
         }
+
         #educação ul {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
+
     }
 
 
@@ -376,9 +484,8 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
         }
+
     }
-
-
 
 
 </style>
@@ -386,6 +493,8 @@
 
 <!-- Menu -->
 <div class="menu-bar">
+    <a href="https://www.linkedin.com/in/jadefr/"><i class="fa fa-linkedin" style="font-size:20px" id="linkedin-icon"></i></a>
+    <a href="https://ieeexplore.ieee.org/abstract/document/8791911"> <i class="fa fa-github" style="font-size:20px"></i></a>
     <a href="#contato" class="font-third">Contato</a>
     <a href="#educação" class="font-third">Educação</a>
     <a href="#projetos" class="font-third">Projetos</a>
@@ -398,7 +507,6 @@
 
 <!-- Header -->
 <header class="header" id="#">
-
     <div class="header_text-box">
         <span class="font-first-main">Jade Ferreira</span>
         <span class="font-first-sub">Engenheira de Software</span>
@@ -436,61 +544,70 @@
         <ul>
             <li>
                 <div class="card">
-                    <a href="https://github.com/jadefr/semantic-iot"><img src="/img/semantic-iot.PNG" class="image projetos_image" alt="semantic-iot"></a>
+                    <a href="https://github.com/jadefr/semantic-iot"><img src="/img/semantic-iot.PNG"
+                                                                          class="image projetos_image"
+                                                                          alt="semantic-iot"></a>
                     <div class="card-content">
                         <span class="font-third">Semantic IoT</span>
                         <p>PHP, JavaScript, CSS, HTML</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/jadefr/semantic-iot" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <a href="https://github.com/pgcc/e-seco"><img src="img/eseco.png" class="image projetos_image" alt="eseco"></a>
+                    <a href="https://github.com/pgcc/e-seco"><img src="img/eseco.png" class="image projetos_image"
+                                                                  alt="eseco"></a>
                     <div class="card-content">
                         <span class="font-third">E-SECO</span>
                         <p>Java, Spring MVC</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/pgcc/e-seco" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <a href="https://github.com/jadefr/iot-data-retriever"><img src="/img/iot-data-retriever.jpg" class="image projetos_image" alt="iot-data-retriever"></a>
+                    <a href="https://github.com/jadefr/iot-data-retriever"><img src="/img/iot-data-retriever.jpg"
+                                                                                class="image projetos_image"
+                                                                                alt="iot-data-retriever"></a>
                     <div class="card-content">
                         <span class="font-third">IoT Data Retriever</span>
                         <p>Java, RESTful API</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/jadefr/iot-data-retriever" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <a href="https://github.com/jadefr/AED"><img src="/img/hash.png" class="image projetos_image" alt="hash-table"></a>
+                    <a href="https://github.com/jadefr/AED"><img src="/img/hash.png" class="image projetos_image"
+                                                                 alt="hash-table"></a>
                     <div class="card-content">
                         <span class="font-third">Estruturas de Dados</span>
                         <p>Java</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/jadefr/AED" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <a href="https://github.com/jadefr/zend-test"><img src="/img/crud.png" class="image projetos_image" alt="zend"></a>
+                    <a href="https://github.com/jadefr/zend-test"><img src="/img/crud.png" class="image projetos_image"
+                                                                       alt="zend"></a>
                     <div class="card-content">
                         <span class="font-third">Cadastro de alunos</span>
                         <p>PHP, Zend Framework 3</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/jadefr/zend-test" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <a href="https://github.com/jadefr/angelus-bot"><img src="/img/telegram.png" class="image projetos_image" alt="telegram"></a>
+                    <a href="https://github.com/jadefr/angelus-bot"><img src="/img/telegram.png"
+                                                                         class="image projetos_image"
+                                                                         alt="telegram"></a>
                     <div class="card-content">
                         <span class="font-third">Angelus Bot</span>
                         <p>Java, Telegram API</p>
-                        <a href="" class="btn btn-projetos">Mais</a>
+                        <a href="https://github.com/jadefr/angelus-bot" class="btn btn-projetos">Mais</a>
                     </div>
                 </div>
             </li>
@@ -519,7 +636,8 @@
             </li>
             <li>
                 <div class="card">
-                    <a href="https://www.maynoothuniversity.ie/"><img src="/img/nuim.png" class="educação_image" alt="nuim"></a>
+                    <a href="https://www.maynoothuniversity.ie/"><img src="/img/nuim.png" class="educação_image"
+                                                                      alt="nuim"></a>
                     <div class="card-content">
                         <h3>National University of Ireland</h3>
                         <p>Engenharia Eletrônica (graduação sanduíche)</p>
@@ -539,31 +657,46 @@
             </li>
         </ul>
     </section>
-
-    <!-- Dark Bar -->
-    <div class="dark-bar"></div>
-
-    <!-- Contato  -->
-    <!--section id="contato">
-        <div class="contato_box">
-            <h2>Contact us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores impedit minima officiis
-                perspiciatis quaerat quas rem, tenetur? Exercitationem nulla, obcaecati.</p>
-            <p>contact@acmewebsolutions.test</p>
-        </div>
-        <div class="contato_box">
-            <h2>About Our Company</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum porro deserunt, deleniti, quae
-                facere repudiandae, officiis est exercitationem nobis iusto doloremque! Soluta excepturi in aut suscipit
-                amet temporibus quo?</p>
-        </div>
-    </section-->
-
-
 </main>
 
+
 <footer>
-    <div class="footer_logo-box">
-        <img src="img/logo-jf.png" alt="jf" class="logo_image">
+    <div class="footer_container-first">
+        <div class="footer_contact-box" id="contato">
+            <div class="footer_contact-box-text">
+                <h2 class="font-fourth-main">Contato</h2>
+                <i class="fa fa-envelope footer_icon-first"></i>
+                <p class="font-fourth-sub">jade@ice.ufjf.br</p>
+                <br>
+                <i class="fa fa-whatsapp footer_icon-first"></i>
+                <p class="font-fourth-sub">+5521967855274</p>
+            </div>
+        </div>
+        <div class="footer_logo-box">
+            <a href=""><img src="img/logo-jf-white.png" alt="jf" class="logo_image" id="footer_logo-image"></a>
+        </div>
+        <div class="footer_quick-links">
+            <div class="footer_quick-links-text">
+                <h2 class="font-fourth-main">Quick Links</h2>
+                <a href="#sobre-mim"><p class="font-fourth-sub" id="skills">Skills</p></a><br>
+                <a href="#projetos"><p class="font-fourth-sub" id="footer_projetos">Projetos</p></a><br>
+                <a href="https://ieeexplore.ieee.org/abstract/document/8791911"><p class="font-fourth-sub">Publicações</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer_container-second">
+        <div class="div_first"></div>
+        <div class="footer_text-box">
+            <p>Desenvolvido por <a href="">Jade Ferreira</a></p>
+        </div>
+        <div class="footer_icon-box-second">
+            <a href="https://www.linkedin.com/in/jadefr/"><i class="fa fa-linkedin footer_icon-second"></i></a>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8791911"><i class="fa fa-github footer_icon-second"></i></a>
+        </div>
     </div>
 </footer>
+
+
+<script>
+
+</script>
