@@ -68,7 +68,6 @@
 
     }
 
-
     .logo_image {
         height: 3.2rem;
         transition: all .3s;
@@ -84,26 +83,18 @@
         transform: scale(1.2);
     }
 
-
     .header_text-box {
-        /*margin: 10% 0;*/
-
         margin-top: auto;
         margin-bottom: auto;
-
     }
 
     .font-first-main {
         margin-top: -250px;
-
         text-transform: lowercase;
-        /*line-height: 1.7;*/
         display: block;
         font-size: 6.5rem;
         font-weight: 400;
         letter-spacing: 0.4rem;
-        animation: leftIn 0.75s ease-out;
-        /*padding-bottom: 2rem;*/
     }
 
     .font-first-sub {
@@ -112,7 +103,6 @@
         font-size: 2rem;
         font-weight: 400;
         letter-spacing: 0.3rem;
-        animation: rightIn 0.75s ease-out;
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
@@ -137,6 +127,25 @@
         background: #eeeeee;
     }
 
+    /*.btn-animated {
+        animation: bottomIn 0.75s ease-out 0.5s;
+        animation-fill-mode: backwards;
+    }
+
+    .main-animated {
+        animation: main-animated 5s infinite;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes main-animated {
+        0% {left: 0px;}
+        100% {left: 400px;}
+    }
+
+    @keyframes bottomIn {
+        from {top: 10px;}
+        to {top: 300px}
+    }*/
 
     /* Sobre Mim */
 
@@ -315,31 +324,8 @@
     }
 
 
-    /* Contato
-
-    #contato {
-        background: black;
-        display: flex;
-        padding: 4%;
-    }
-
-    .contato_box {
-        padding: 2em;
-        color: #fff;
-        flex: 1;
-    }
-
-    .contato_box:first-child {
-        background: #0000c1;
-    }*/
-
 
     /* Footer */
-
-    footer {
-        /*background: #26272b;
-        color: #737373;*/
-    }
 
     footer a {
         text-decoration: none;
@@ -353,7 +339,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-
 
     .footer_contact-box {
         text-align: left;
@@ -379,10 +364,6 @@
         padding-right: 1em;
     }
 
-    .footer_logo-box {
-
-    }
-
     #footer_logo-image {
         height: 4rem;
         padding-top: 3em;
@@ -396,6 +377,7 @@
         text-align: left;
         float: right;
     }
+
 
 
     .footer_container-second {
@@ -431,6 +413,11 @@
         padding-right: 0.5em;
     }
 
+
+    .menu-bar .icon {
+        display: none;
+    }
+
     @media (max-width: 1140px) {
         #projetos ul {
             grid-template-columns: 1fr 1fr;
@@ -443,7 +430,6 @@
         }
 
     }
-
 
     @media (max-width: 780px) {
         #projetos ul {
@@ -462,6 +448,70 @@
             grid-template-rows: 1fr 1fr;
         }
 
+        .menu-bar a {
+            display: none;
+        }
+        .menu-bar a.icon {
+            float: right;
+            display: block;
+            font-size: 2rem;
+        }
+        .menu-bar.responsive {
+            position: relative;
+        }
+        .menu-bar.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .menu-bar.responsive a {
+            float: none;
+            display: block;
+            text-align: center;
+        }
+
+        header {
+            min-height: calc(100vh - 50px - 3em);
+        }
+
+    }
+
+    @media (max-width: 620px) {
+        .footer_container-first {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .footer_contact-box {
+            display: block;
+            padding-left: 0;
+            text-align: center;
+        }
+        .footer_logo-box {
+            display: block;
+            margin-bottom: 0;
+            text-align: center;
+            padding-top: 3em;
+            background: #475058;
+        }
+        .footer_quick-links {
+            display: block;
+            margin-top: 0;
+        }
+        .footer_quick-links-text {
+            float: none;
+            margin-top: 0;
+            text-align: center;
+        }
+        .footer_quick-links {
+            padding-right: 0;
+        }
+        #footer_logo-image {
+            margin-bottom: 0;
+            height: 4rem;
+            padding: 0;
+        }
 
     }
 
@@ -492,13 +542,14 @@
 <?php $this->placeholder('page-css')->captureEnd(); ?>
 
 <!-- Menu -->
-<div class="menu-bar">
+<div class="menu-bar" id="menu-bar">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     <a href="https://www.linkedin.com/in/jadefr/"><i class="fa fa-linkedin" style="font-size:20px" id="linkedin-icon"></i></a>
     <a href="https://ieeexplore.ieee.org/abstract/document/8791911"> <i class="fa fa-github" style="font-size:20px"></i></a>
     <a href="#contato" class="font-third">Contato</a>
     <a href="#educação" class="font-third">Educação</a>
     <a href="#projetos" class="font-third">Projetos</a>
-    <a href="#cv" class="font-third">Currículo</a>
+    <!--a href="#cv" class="font-third">Currículo</a-->
 </div>
 
 <div class="header_logo-box">
@@ -508,9 +559,9 @@
 <!-- Header -->
 <header class="header" id="#">
     <div class="header_text-box">
-        <span class="font-first-main">Jade Ferreira</span>
-        <span class="font-first-sub">Engenheira de Software</span>
-        <a href="#sobre-mim" class="btn btn-header">Mais</a>
+        <span class="font-first-main main-animated">Jade Ferreira</span>
+        <span class="font-first-sub sub-animated">Engenheira de Software</span>
+        <a href="#sobre-mim" class="btn btn-header btn-animated btn-smooth">Mais</a>
     </div>
 </header>
 
@@ -696,7 +747,40 @@
     </div>
 </footer>
 
-
+<?php $this->placeholder('script-js')->captureStart(); ?>
 <script>
+   /*
 
+    // Scroll to specific values
+    // scrollTo is the same
+    window.scroll({
+        top: 2500,
+        left: 0,
+        behavior: 'smooth'
+    });
+
+    // Scroll certain amounts from current position
+    window.scrollBy({
+        top: 100, // could be negative value
+        left: 0,
+        behavior: 'smooth'
+    });
+
+    // Scroll to a certain element
+    document.querySelector('.hello').scrollIntoView({
+        behavior: 'smooth'
+    });
+
+
+    */
+
+   function myFunction() {
+       var x = document.getElementById("menu-bar");
+       if (x.className === "menu-bar") {
+           x.className += " responsive";
+       } else {
+           x.className = "menu-bar";
+       }
+   }
 </script>
+<?php $this->placeholder('script-js')->captureEnd(); ?>
