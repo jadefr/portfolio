@@ -149,7 +149,7 @@
 
     /* Sobre Mim */
 
-    #sobre-mim {
+    #skills {
         padding: 5%;
         background: #505050;
     }
@@ -172,11 +172,11 @@
 
     }
 
-    .sobre-mim_text-box {
+    .skills_text-box {
         padding-bottom: 2rem;
     }
 
-    .sobre-mim_icon-box {
+    .skills_icon-box {
         padding-top: 2rem;
         transition: all .3s;
         font-size: 5rem;
@@ -396,7 +396,7 @@
         color: #3366cc;
     }
 
-    #skills:hover,
+    #footer_skills:hover,
     #footer_projetos:hover {
         color: #3366cc;
     }
@@ -442,7 +442,7 @@
             grid-template-columns: 1fr;
         }
 
-        .sobre-mim_icon-box {
+        .skills_icon-box {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr 1fr;
@@ -529,7 +529,7 @@
             font-size: 5rem;
         }
 
-        .sobre-mim_icon-box {
+        .skills_icon-box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
@@ -545,10 +545,10 @@
 <div class="menu-bar" id="menu-bar">
     <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     <a href="https://www.linkedin.com/in/jadefr/"><i class="fa fa-linkedin" style="font-size:20px" id="linkedin-icon"></i></a>
-    <a href="https://ieeexplore.ieee.org/abstract/document/8791911"> <i class="fa fa-github" style="font-size:20px"></i></a>
+    <a href="https://github.com/jadefr/"> <i class="fa fa-github" style="font-size:20px"></i></a>
     <a href="#contato" class="font-third">Contato</a>
     <a href="#educação" class="font-third">Educação</a>
-    <a href="#projetos" class="font-third">Projetos</a>
+    <a href="#projetos" class="font-third" id="btn-projetos">Projetos</a>
     <!--a href="#cv" class="font-third">Currículo</a-->
 </div>
 
@@ -561,15 +561,15 @@
     <div class="header_text-box">
         <span class="font-first-main main-animated">Jade Ferreira</span>
         <span class="font-first-sub sub-animated">Engenheira de Software</span>
-        <a href="#sobre-mim" class="btn btn-header btn-animated btn-smooth">Mais</a>
+        <a href="#skills" class="btn btn-header btn-animated" id="btn-smooth">Mais</a>
     </div>
 </header>
 
 <main>
 
     <!-- Sobre Mim -->
-    <section id="sobre-mim">
-        <div class="sobre-mim_text-box">
+    <section id="skills">
+        <div class="skills_text-box">
             <span class="font-second-plain">Foco em</span>
             <span class="font-second-bold"> Back End</span>
             <br>
@@ -577,7 +577,7 @@
             <span class="font-second-bold"> Full Stack</span>
         </div>
         <hr>
-        <div class="sobre-mim_icon-box">
+        <div class="skills_icon-box">
             <i class="devicon-php-plain icon"></i>
             <i class="devicon-java-plain-wordmark icon"></i>
             <i class="devicon-javascript-plain icon"></i>
@@ -729,7 +729,7 @@
         <div class="footer_quick-links">
             <div class="footer_quick-links-text">
                 <h2 class="font-fourth-main">Quick Links</h2>
-                <a href="#sobre-mim"><p class="font-fourth-sub" id="skills">Skills</p></a><br>
+                <a href="#skills"><p class="font-fourth-sub" id="footer_skills">Skills</p></a><br>
                 <a href="#projetos"><p class="font-fourth-sub" id="footer_projetos">Projetos</p></a><br>
                 <a href="https://ieeexplore.ieee.org/abstract/document/8791911"><p class="font-fourth-sub">Publicações</a></p>
             </div>
@@ -738,7 +738,7 @@
     <div class="footer_container-second">
         <div class="div_first"></div>
         <div class="footer_text-box">
-            <p>Desenvolvido por <a href="">Jade Ferreira</a></p>
+            <p>Desenvolvido por <a href="https://github.com/jadefr/portfolio">Jade Ferreira</a></p>
         </div>
         <div class="footer_icon-box-second">
             <a href="https://www.linkedin.com/in/jadefr/"><i class="fa fa-linkedin footer_icon-second"></i></a>
@@ -749,32 +749,28 @@
 
 <?php $this->placeholder('script-js')->captureStart(); ?>
 <script>
-   /*
 
-    // Scroll to specific values
-    // scrollTo is the same
-    window.scroll({
-        top: 2500,
-        left: 0,
-        behavior: 'smooth'
-    });
+    var btnSmooth = document.querySelector("#btn-smooth");
+    var btnProjetos = document.querySelector("#btn-projetos");
 
-    // Scroll certain amounts from current position
-    window.scrollBy({
-        top: 100, // could be negative value
-        left: 0,
-        behavior: 'smooth'
-    });
+    btnSmooth.onclick = function () {
+        document.querySelector("#skills").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 
-    // Scroll to a certain element
-    document.querySelector('.hello').scrollIntoView({
-        behavior: 'smooth'
-    });
+    btnProjetos.onclick = function () {
+        document.querySelector("#projetos").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 
 
-    */
 
-   function myFunction() {
+    /**
+     *  Menu responsivo
+      */
+    function myFunction() {
        var x = document.getElementById("menu-bar");
        if (x.className === "menu-bar") {
            x.className += " responsive";
