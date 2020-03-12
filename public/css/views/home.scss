@@ -205,7 +205,8 @@ header {
     height: auto;
 }
 
-/* TEST */
+/* Destaques */
+
 
 #destaques {
     background: white;
@@ -255,6 +256,21 @@ header {
             .destaques_image {
                 width: 70%;
             }
+
+            @media (max-width: 1128px) {
+                order: 1;
+            }
+        }
+
+        #aed_text_container {
+            @media (max-width: 1128px) {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 1128px) {
+            display: grid;
+            grid-template-columns: 1fr;
         }
     }
 
@@ -262,6 +278,10 @@ header {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @media (max-width: 1128px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "image_container" "text_container";
+        }
 
         .destaques_image_container {
             .destaques_image {

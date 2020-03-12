@@ -176,7 +176,7 @@ header .btn-header:hover {
   height: auto;
 }
 
-/* TEST */
+/* Destaques */
 #destaques {
   background: white;
   color: #505050;
@@ -215,9 +215,31 @@ header .btn-header:hover {
 #destaques #aed #aed_image_container .destaques_image {
   width: 70%;
 }
+@media (max-width: 1128px) {
+  #destaques #aed #aed_image_container {
+    order: 1;
+  }
+}
+@media (max-width: 1128px) {
+  #destaques #aed #aed_text_container {
+    order: 2;
+  }
+}
+@media (max-width: 1128px) {
+  #destaques #aed {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 #destaques .destaques_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1128px) {
+  #destaques .destaques_item {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image_container" "text_container";
+  }
 }
 #destaques .destaques_item .destaques_image_container .destaques_image {
   object-fit: cover;
