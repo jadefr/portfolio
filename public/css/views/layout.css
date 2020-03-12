@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #505050;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+/* Footer */
+
+.footer_container-first {
+    color: #adb5bd;
+    font-weight: lighter;
+    background-color: #343a40;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer_contact-box {
+    text-align: left;
+    padding-left: 3em;
+}
+
+.font-fourth-main {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+}
+
+.font-fourth-sub {
+    color: #dee2e6;
+    display: inline-block;
+    margin-top: 0;
+}
+
+.footer_icon-first {
+    display: inline-block;
+    font-size: 1.1em;
+    padding-right: 1em;
+}
+
+#footer_logo-image {
+    height: 4rem;
+    padding-top: 3em;
+}
+
+.footer_quick-links {
+    padding-right: 3.5rem;
+}
+
+.footer_quick-links-text {
+    text-align: left;
+    float: right;
+}
+
+.footer_container-second {
+    display: grid;
+    color: #868e96;
+    background-color: #212529;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
+footer a:hover {
+    color: #3366cc;
+}
+
+#footer_skills:hover,
+#footer_projetos:hover {
+    color: #3366cc;
+}
+
+.footer_icon-box-second {
+    font-size: 1.4rem;
+    margin-top: 0.5em;
+    text-align: right;
+    padding-right: 1em;
+    text-decoration: none;
+}
+
+.footer_icon-second {
+    padding-right: 0.5em;
+}
+
+
+@media (max-width: 620px) {
+
+    .footer_container-first {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .footer_contact-box {
+        display: block;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .footer_logo-box {
+        display: block;
+        margin-bottom: 0;
+        text-align: center;
+        padding-top: 3em;
+        background: #475058;
+    }
+
+    .footer_quick-links {
+        display: block;
+        margin-top: 0;
+    }
+
+    .footer_quick-links-text {
+        float: none;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .footer_quick-links {
+        padding-right: 0;
+    }
+
+    #footer_logo-image {
+        margin-bottom: 0;
+        height: 4rem;
+        padding: 0;
+    }
+
+}

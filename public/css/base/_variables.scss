@@ -1,0 +1,38 @@
+$btn {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #505050;
+  text-decoration: none;
+  padding: 0.7em 4em;
+  border-radius: 10px;
+  border: 1px solid #505050;
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
+    background: #eeeeee;
+  }
+}
+
+$font-second-plain {
+  text-transform: uppercase;
+  font-size: 2rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+$font-second-bold {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+
+}
+
+$image {
+  width: 100%;
+  height: auto;
+}
