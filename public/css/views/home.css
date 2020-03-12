@@ -182,7 +182,7 @@ header .btn-header:hover {
   color: #505050;
 }
 #destaques .between-items {
-  margin-top: 3em;
+  margin-top: 1em;
   width: 80%;
   opacity: 0.3;
   font-weight: lighter;
@@ -201,10 +201,13 @@ header .btn-header:hover {
   width: 50%;
 }
 #destaques #distinctio {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 #destaques #distinctio #distinctio_image_container .destaques_image {
   width: 92%;
+}
+#destaques #aed {
+  padding-top: 1em;
 }
 #destaques #aed #aed_image_container {
   padding-top: 1em;
@@ -249,6 +252,9 @@ header .btn-header:hover {
 }
 #destaques .destaques_item .destaques_text_container .destaques_font-subtitle {
   font-size: 1.4rem;
+}
+#destaques .destaques_item .destaques_text_container p {
+  font-size: 1.1rem;
 }
 
 /* Projetos */

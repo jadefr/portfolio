@@ -1,0 +1,25 @@
+@import '../base/_variables.scss';
+
+@mixin xs {
+  @media (max-width: #{$xs}) {
+    @content
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$sm}) {
+    @content
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$md}) {
+    @content
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$lg}) {
+    @content
+  }
+}
