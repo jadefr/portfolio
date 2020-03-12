@@ -181,34 +181,48 @@ header .btn-header:hover {
   background: white;
   color: #505050;
 }
+#destaques .between-items {
+  margin-top: 3em;
+  width: 80%;
+  opacity: 0.3;
+  font-weight: lighter;
+}
 #destaques #quiz {
-  padding-top: 5em;
+  padding-top: 2em;
+}
+#destaques #quiz #quiz_text_container {
+  padding-top: 3em;
 }
 #destaques #quiz #quiz_image_container {
   border: 1px #505050;
+  padding-bottom: 2em;
 }
 #destaques #quiz #quiz_image_container .destaques_image {
-  width: 360px;
-  height: 500px;
+  width: 50%;
 }
 #destaques #distinctio {
   padding-top: 3em;
 }
-#destaques #distinctio .destaques_image {
-  width: 630px;
-  height: 360px;
+#destaques #distinctio #distinctio_image_container .destaques_image {
+  width: 92%;
+}
+#destaques #aed #aed_image_container {
+  padding-top: 1em;
+}
+#destaques #aed #aed_image_container .destaques_image {
+  width: 70%;
 }
 #destaques .destaques_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#destaques .destaques_item .destaques_image {
+#destaques .destaques_item .destaques_image_container .destaques_image {
   object-fit: cover;
   border-radius: 5px;
   transition: all 0.3s;
   min-width: 50px;
 }
-#destaques .destaques_item .destaques_image:hover {
+#destaques .destaques_item .destaques_image_container .destaques_image:hover {
   transform: scale(1.05);
 }
 #destaques .destaques_item .destaques_buttons {
@@ -229,9 +243,12 @@ header .btn-header:hover {
 #destaques .destaques_item .destaques_text_container {
   padding: 3em 1em;
 }
-#destaques .destaques_item .destaques_text_container .destaques_font {
-  font-size: 1.6rem;
+#destaques .destaques_item .destaques_text_container .destaques_font-title {
+  font-size: 1.7rem;
   font-weight: normal;
+}
+#destaques .destaques_item .destaques_text_container .destaques_font-subtitle {
+  font-size: 1.4rem;
 }
 
 /* Projetos */
@@ -241,7 +258,7 @@ header .btn-header:hover {
 
 .section-title hr {
   width: 40%;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .card-content {

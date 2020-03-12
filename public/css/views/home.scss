@@ -211,15 +211,27 @@ header {
     background: white;
     color: #505050;
 
+    .between-items {
+        margin-top: 3em;
+        width: 80%;
+        opacity: 0.3;
+        font-weight: lighter;
+    }
+
     #quiz {
-        padding-top: 5em;
+        padding-top: 2em;
+        #quiz_text_container {
+            padding-top: 3em;
+        }
 
         #quiz_image_container {
             border: 1px #505050;
+            padding-bottom: 2em;
 
             .destaques_image {
-                width: 360px;
-                height: 500px;
+                //width: 360px;
+                //height: 500px;
+                width: 50%;
             }
         }
     }
@@ -227,9 +239,21 @@ header {
     #distinctio {
         padding-top: 3em;
 
-        .destaques_image {
-            width: 630px;
-            height: 360px;
+        #distinctio_image_container {
+            .destaques_image {
+                width: 92%;
+            }
+        }
+    }
+
+    #aed {
+
+        #aed_image_container{
+            padding-top: 1em;
+
+            .destaques_image {
+                width: 70%;
+            }
         }
     }
 
@@ -237,13 +261,15 @@ header {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        .destaques_image {
-            object-fit: cover;
-            border-radius: 5px;
-            transition: all .3s;
-            min-width: 50px;
-            &:hover {
-                transform: scale(1.05);
+        .destaques_image_container {
+            .destaques_image {
+                object-fit: cover;
+                border-radius: 5px;
+                transition: all .3s;
+                min-width: 50px;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
 
@@ -268,9 +294,14 @@ header {
 
         .destaques_text_container {
             padding: 3em 1em;
-            .destaques_font {
-                font-size: 1.6rem;
+
+            .destaques_font-title {
+                font-size: 1.7rem;
                 font-weight: normal;
+            }
+
+            .destaques_font-subtitle {
+                font-size: 1.4rem;
             }
         }
     }
@@ -283,7 +314,7 @@ header {
 
 .section-title hr {
     width: 40%;
-    opacity: 60%;
+    opacity: 0.6;
 }
 
 .card-content {
