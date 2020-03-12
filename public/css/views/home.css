@@ -121,6 +121,16 @@ header .btn-header:hover {
   margin: auto;
   transition: all 0.3s;
 }
+@media (max-width: 782px) {
+  #skills .skills_icon-box .icon {
+    font-size: 70%;
+  }
+}
+@media (max-width: 340px) {
+  #skills .skills_icon-box .icon {
+    font-size: 55%;
+  }
+}
 #skills .skills_icon-box .icon:hover {
   transform: scale(1.2);
 }
@@ -130,12 +140,32 @@ header .btn-header:hover {
 #skills .skills_icon-box #skills_icon-box-first .icon:first-child {
   font-size: 7rem;
 }
+@media (max-width: 782px) {
+  #skills .skills_icon-box #skills_icon-box-first .icon:first-child {
+    font-size: 80%;
+  }
+}
 #skills .skills_icon-box #skills_icon-box-first .icon:nth-child(2) {
   font-size: 6rem;
+}
+@media (max-width: 782px) {
+  #skills .skills_icon-box #skills_icon-box-first .icon:nth-child(2) {
+    font-size: 80%;
+  }
+}
+@media (max-width: 782px) {
+  #skills .skills_icon-box #skills_icon-box-first {
+    display: block;
+  }
 }
 #skills .skills_icon-box #skills_icon-box-second {
   display: flex;
   padding-top: 20px;
+}
+@media (max-width: 782px) {
+  #skills .skills_icon-box #skills_icon-box-second {
+    display: block;
+  }
 }
 
 /* Global */
@@ -519,12 +549,6 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
-  .skills_icon-box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-  }
-
   .menu-bar a {
     display: none;
   }
@@ -579,12 +603,6 @@ footer a:hover {
 
   .projetos_image {
     width: 300px;
-  }
-
-  .skills_icon-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
   }
 }
 
