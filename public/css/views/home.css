@@ -86,6 +86,13 @@ header .header_text-box .font-first-main {
   font-weight: 400;
   letter-spacing: 0.4rem;
 }
+@media (max-width: 440px) {
+  header .header_text-box .font-first-main {
+    font-size: 4.5rem;
+    margin-top: -150px;
+    padding-bottom: 1rem;
+  }
+}
 header .header_text-box .font-first-sub {
   text-transform: uppercase;
   display: block;
@@ -94,6 +101,11 @@ header .header_text-box .font-first-sub {
   letter-spacing: 0.3rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+}
+@media (max-width: 440px) {
+  header .header_text-box .font-first-sub {
+    font-size: 1.5rem;
+  }
 }
 header .btn-header {
   margin-top: 0.5rem;
@@ -577,22 +589,6 @@ footer a:hover {
 
   header {
     min-height: calc(100vh - 50px - 3em);
-  }
-}
-@media (max-width: 440px) {
-  .header_text-box {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .font-first-main {
-    font-size: 5rem;
-    margin-top: -150px;
-    padding-bottom: 1rem;
-  }
-
-  .font-first-sub {
-    font-size: 1.5rem;
   }
 }
 @media (max-width: 380px) {
