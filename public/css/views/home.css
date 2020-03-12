@@ -197,6 +197,11 @@ header .btn-header:hover {
   border: 1px #505050;
   padding-bottom: 2em;
 }
+@media (max-width: 572px) {
+  #destaques #quiz #quiz_image_container {
+    padding-bottom: 0;
+  }
+}
 #destaques #quiz #quiz_image_container .destaques_image {
   width: 50%;
 }
@@ -205,6 +210,11 @@ header .btn-header:hover {
 }
 #destaques #distinctio #distinctio_image_container .destaques_image {
   width: 92%;
+}
+@media (max-width: 572px) {
+  #destaques #distinctio #distinctio_image_container .destaques_image {
+    width: 80%;
+  }
 }
 #destaques #aed {
   padding-top: 1em;
@@ -257,6 +267,12 @@ header .btn-header:hover {
   display: block;
   margin: 1rem 9rem;
 }
+@media (max-width: 572px) {
+  #destaques .destaques_item .destaques_buttons .btn-destaques {
+    font-size: 0.9rem;
+    margin: 1rem 1rem;
+  }
+}
 #destaques .destaques_item .destaques_buttons .btn-destaques-first {
   background: #505050;
   color: white;
@@ -272,11 +288,26 @@ header .btn-header:hover {
   font-size: 1.7rem;
   font-weight: normal;
 }
+@media (max-width: 572px) {
+  #destaques .destaques_item .destaques_text_container .destaques_font-title {
+    font-size: 1.3rem;
+  }
+}
 #destaques .destaques_item .destaques_text_container .destaques_font-subtitle {
   font-size: 1.4rem;
 }
+@media (max-width: 572px) {
+  #destaques .destaques_item .destaques_text_container .destaques_font-subtitle {
+    font-size: 1.2rem;
+  }
+}
 #destaques .destaques_item .destaques_text_container p {
   font-size: 1.1rem;
+}
+@media (max-width: 572px) {
+  #destaques .destaques_item .destaques_text_container p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Projetos */
