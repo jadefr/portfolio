@@ -428,9 +428,6 @@ header .btn-header:hover {
 #educação {
   background: white;
   color: #505050;
-  /*margin: 10px;
-  border-radius: 10px;*/
-  /* Dark Bar */
 }
 
 #educação ul {
@@ -595,6 +592,15 @@ footer a:hover {
   #educação ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  #ufjf {
+    padding-bottom: 0;
+  }
+
+  #uff {
+    padding-bottom: 0;
+    padding-top: 2rem;
   }
 
   .projetos_image {

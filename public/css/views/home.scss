@@ -469,8 +469,6 @@ header {
 #educação {
     background: white;
     color: #505050;
-    /*margin: 10px;
-    border-radius: 10px;*/ /* Dark Bar */
 
 }
 
@@ -638,28 +636,20 @@ footer a:hover {
 }
 
 
-//@media (max-width: 440px) {
-//    .header_text-box {
-//        padding-right: 20px;
-//        padding-left: 20px;
-//    }
-//
-//    .font-first-main {
-//        font-size: 5rem;
-//        margin-top: -150px;
-//        padding-bottom: 1rem;
-//    }
-//
-//    .font-first-sub {
-//        font-size: 1.5rem;
-//    }
-//}
-
-
 @media (max-width: 380px) {
     #educação ul {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
+    }
+
+
+    #ufjf {
+        padding-bottom: 0;
+    }
+
+    #uff {
+        padding-bottom: 0;
+        padding-top: 2rem;
     }
 
     .projetos_image {
