@@ -403,6 +403,12 @@ header .btn-header:hover {
   margin-bottom: 1em;
   padding: 1rem;
 }
+#projetos li #stack-img {
+  width: 40%;
+}
+#projetos li #binary-search-tree-img {
+  width: 68%;
+}
 
 .projetos_image {
   width: 360px;
