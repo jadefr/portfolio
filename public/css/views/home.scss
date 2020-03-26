@@ -124,8 +124,8 @@ header {
         margin-top: 0.5rem;
 
         &:hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
-            background: #eeeeee;
+            color: white;
+            background: #505050;
         }
     }
 }
@@ -352,10 +352,10 @@ header {
             .btn-destaques-first {
                 background: #505050;
                 color: white;
-                opacity: 0.7;
 
                 &:hover {
-                    opacity: 1;
+                    background: white;
+                    color: #505050;
                 }
             }
         }
@@ -422,6 +422,11 @@ header {
 
 .btn-projetos {
     margin-top: 10px;
+
+    &:hover {
+        background: #505050;
+        color: white;
+    }
 }
 
 #projetos {
