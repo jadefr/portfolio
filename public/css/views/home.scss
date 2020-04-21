@@ -314,6 +314,35 @@ header {
         }
     }
 
+    #landing-page {
+        padding-top: 2em;
+
+        #landing-page_image_container {
+            border: 1px #505050;
+            padding-bottom: 2em;
+
+            @media (max-width: 1128px) {
+                order: 1;
+            }
+
+            .destaques_image {
+                width: 90%;
+            }
+        }
+
+        #landing-page_text_container {
+            @media (max-width: 1128px) {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 1128px) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+
     .destaques_item {
         display: grid;
         grid-template-columns: 1fr 1fr;

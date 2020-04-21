@@ -283,6 +283,32 @@ header .btn-header:hover {
     grid-template-columns: 1fr;
   }
 }
+#destaques #landing-page {
+  padding-top: 2em;
+}
+#destaques #landing-page #landing-page_image_container {
+  border: 1px #505050;
+  padding-bottom: 2em;
+}
+@media (max-width: 1128px) {
+  #destaques #landing-page #landing-page_image_container {
+    order: 1;
+  }
+}
+#destaques #landing-page #landing-page_image_container .destaques_image {
+  width: 90%;
+}
+@media (max-width: 1128px) {
+  #destaques #landing-page #landing-page_text_container {
+    order: 2;
+  }
+}
+@media (max-width: 1128px) {
+  #destaques #landing-page {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 #destaques .destaques_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
