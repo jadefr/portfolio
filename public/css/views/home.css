@@ -261,6 +261,9 @@ header .btn-header:hover {
 #destaques #lucro {
   padding-top: 2em;
 }
+#destaques #lucro #lucro_image_container {
+  margin: 1em 0;
+}
 #destaques #lucro #lucro_image_container .destaques_image {
   width: 86%;
 }
