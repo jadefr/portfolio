@@ -258,6 +258,12 @@ header .btn-header:hover {
     width: 80%;
   }
 }
+#destaques #lucro {
+  padding-top: 2em;
+}
+#destaques #lucro #lucro_image_container .destaques_image {
+  width: 86%;
+}
 #destaques #aed {
   padding-top: 1em;
 }
